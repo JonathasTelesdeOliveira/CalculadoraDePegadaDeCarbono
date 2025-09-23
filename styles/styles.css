@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --cor-primaria:  #E8ECD7;
+    --cor-tercearia: #f48d08;
+    --cor-hover: #47663B;
+    --cor-fundo: linear-gradient(to bottom right, #81C784, #4FC3F7);
+
+    --fonte-principal: "Krona One", sans-serif; 
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    /*height: 100vh; */
+    background: #023902;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cabecalho{
+    padding: 3% 0 0 8%;
+    height: 190px;
+    background-color: #6F4E37;
+   
+    
+}
+.cabecalho_menu{
+    display: flex;
+    justify-content: right;
+    gap: 60px;
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+    padding: 2% 10% 2% 0%;
+}
+.cabecalho_menu_link{
+    color:  var(--cor-tercearia);
+    padding: 0.3%;
+    background-color: var(--cor-primaria);
+    border: 0.15rem line var(--cor-tercearia);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.cabecalho_menu_link:hover{
+    padding: 0.2%;
+    color: var(--cor-primaria);
+    background-color: #FFA726;
+    border: 0.14rem double var(--cor-primaria);
+    border-radius: 4px;
+}
+.conteiner{
+     background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* overlay preto translúcido */
+         url(../assets/Chapadão-da-Serra-da-Canastra.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding: 6% 5% 0%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: space-between;
+    gap:50px;
+}
+.conteiner_conteudo{ 
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: -6%;
+}
+.conteiner_conteudo_titulo{
+    font-size: 2rem;
+    font-family: var(--fonte-principal);
+    color:var(--cor-tercearia);
+    line-height: 1.6;
+    text-align: center;
+    font-weight: bold;
+
+}
+.conteiner_conteudo_texto{
+    font-size: 1.2rem;
+    font-family: var(--fonte-secundaria);
+    color: white;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.7);
+    font-weight: 600;
+    line-height: 1.6;
+    font-weight: bold;
+}
+.conteiner_img{
+    width: 35%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position:right-top;
+}
+.conteiner_rodape{              /*  floter */
+    background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* overlay preto translúcido */
+        url(../assets/Rio.png);
+    background-size:100% 100%;
+    height: 250px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+.conteiner_menu_rodape{    /*  Section */
+    display: flex;
+    flex-direction: column;
+}
+
+.conteiner_rodape_subtitulo{
+    color: #4FC3F7;
+    line-height: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family: var(--fonte-secundaria);
+}
+.conteiner_navegacao{
+    display: flex;
+    color:  var(--cor-tercearia);
+    flex-direction: row;
+    gap: 6px;
+}
+@media (max-width: 1400px){
+    .cabecalho{
+        padding: 5%;
+    }
+    .cabecalho_menu{
+        justify-content:right;
+        gap: 5%;
+    }
+    .cabecalho_menu_link{
+        padding: 0.2%;
+    }
+    .conteiner{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .conteiner_conteudo{
+        width:100%;
+    }
+      
+}
+
