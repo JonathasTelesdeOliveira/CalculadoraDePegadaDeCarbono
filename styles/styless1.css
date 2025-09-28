@@ -4,8 +4,7 @@
     --cor-primaria:  #E8ECD7;
     --cor-tercearia: #f48d08;
     --cor-hover: #47663B;
-    --cor-fundo: linear-gradient(to bottom right, #81C784, #4FC3F7);
-
+    --cor-fundo: #6F4E37;;
     --fonte-principal: "Krona One", sans-serif; 
     --fonte-secundaria: "Montserrat", sans-serif;
 }
@@ -15,7 +14,7 @@
 }
 body{
     /*height: 100vh; */
-    background: #023902;
+    background-color: #023902;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -23,7 +22,7 @@ body{
 }
 .cabecalho{
     height: 190px;
-    background-color: #6F4E37;
+    background-color: var(--cor-fundo);
 }
 .cabecalho_menu{
     display: flex;
@@ -54,17 +53,24 @@ body{
     background: 
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* overlay preto translúcido */
          url(../assets/canastra2.png);
-    background-size: cover;
+    background-size: contain; 
+    /*background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
+     
+    background-repeat: no-repeat;
+    /* ajusta a altura proporcionalmente */
 
+    background-position: center;
+     /* mantém proporção da imagem */
+    
     display: flex;
     flex-direction: row;
     align-items:center;
     justify-content: space-between;
-    max-width: 100%;
-    height: 500px;
-    padding-left: 3%;
+    width: auto;
+    max-width: 100%;         /* nunca ultrapassa o container */
+    height: auto;    
 }
 
 .conteiner_conteudo_titulo{
@@ -89,58 +95,92 @@ body{
 .container__texto-azul {
     color: #1875E8;
 }
+.conteiner_conteudo-calc {       /* section */
+    background-color: #F5F5DC; /* bege clarinho */
+    border-radius: 30px;
+    border-color: var(--cor-fundo);
+    border-width: 4px;
+    border-style: solid;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 28%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    gap: 30px;
+}
 
 .img{                   /* Imagem acima da calculadora  */
     display: flex;
     width: 350px;
     height: auto;
-    max-width: 100%;
-    padding: 3% 0% 0% 45%;
-}
-.conteiner_rosa{  
-    max-width: 60%;
-    height: auto;
-    object-fit: contain;
-    background-color: rgb(23, 50, 11);
-    border-radius: 8px;
-
-}
-
-.conteiner_conteudo-calc {       /* section */
-    background-color: #F5F5DC; /* bege clarinho */
-    border-radius: 30px;
-    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
-    max-width: 100%;
-    height: 350px;
-}
-.container_calc__informacoes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 100%;
-    gap: 30px;
-}
-.conteiner_calc_texto {
-    color: rgb(62, 8, 241);
-    font-size: 1rem;
-    font-family: var(--fonte-secundaria);
-    font-weight: 100;
-    line-height: 1.6;
-    font-weight: bold;
+    max-width: 75%;
     
 }
+.conteiner_rosa{  
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-color: var(--cor-fundo);
+    border-radius: 8px;
+    padding: 1%;
+    margin-top: 10%;
+}
+
+
+.conteiner_conteudo-calc2 {       /* section */
+    background-color: white;    /* bege clarinho */
+    border-radius: 30px;
+    border-color: var(--cor-fundo);
+    border-width: 4px;
+    border-style: solid;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-direction: column;
+    
+    width: 25%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+.conteiner_rosa2{  
+    width: 100%;
+    max-width: 110%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.conteiner_calc_texto {
+    color: rgb(62, 8, 241);
+    font-size: 0.5rem;
+    font-family: var(--fonte-secundaria);
+    font-weight: 50;
+    line-height: 1.0;
+    font-weight: bold;
+    text-align: center;
+    word-wrap: break-word; /* força a quebra de linha de palavras grandes */
+    white-space: normal; /* Garante que o texto quebre automatimanete  */
+    max-width: 100%;
+}
+.container_calc__informacoes { /* Conteiner  */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 75%;
+    gap: 30px;
+}
 .conteiner_calc_entrada{     
-    width: 50%;
+    width: 80%;
     border-radius: 16px;
     border: none;
     padding: 1rem;
     font-size: 24px;
     font-weight: 700;
     font-family: 'Inter', sans-serif;
+    color: var(--cor-primaria);
     background-color: #325737;
     text-align: center;
 
@@ -154,6 +194,8 @@ body{
     border-radius: 0.5rem;
     font-size: 10px;
     font-weight: bold;
+    max-width: 100%;
+    margin-bottom: 5%;
 }
 .conteiner_button_filha:hover{
 
@@ -199,7 +241,7 @@ body{
 }
 
 .conteiner_rodape_subtitulo{
-    color: #4FC3F7;
+    color: var(--cor-hover);
     line-height: 1rem;
     font-weight: bold;
     font-size: 1rem;
@@ -212,6 +254,17 @@ body{
     gap: 6px;
 }
 @media (max-width: 1400px){
+    @media (max-width: 768px) {
+    .conteiner_img {
+        width: 50%; /* aumenta a proporção em telas pequenas */
+    }
+    }
+
+    @media (max-width: 480px) {
+        .conteiner_img {
+            width: 80%;
+        }
+    }
     .cabecalho{
         padding: 5%;
     }
