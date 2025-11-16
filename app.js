@@ -9,7 +9,7 @@ function limparCampo(){
 // Eletricidade
 function alterarEntrada1 () {
     const entrada = document.querySelector('.conteiner_calc_entrada');
-    entrada.placeholder = "Preecha aqui";
+    entrada.placeholder = "(ex: R$ ou Kw)";
     entrada.id = "LUZ";
 }
 function alterarImagem1() {
@@ -109,7 +109,7 @@ function proximaEtapa() {
         alterarEntrada1();
         alterarImagem1();
         imprimirTexto('h1', 'Consumo de eletriciade');
-        imprimirTexto('p', 'Informe o consumo mensal em KW/Insira seu consumo MENSAL de energia, ou o valor de sua conta. Veja onde encontrar essa informação na sua conta de energia elétrica com eletricidade');
+        imprimirTexto('p', 'Informe o consumo mensal em KW/. Veja onde encontrar essa informação na sua conta de energia.');
     }
     if (etapa === 2) {
         // Gasto com Gás
