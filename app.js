@@ -77,29 +77,27 @@ function alterarImagem6() {
     imagem.src = "assets/Aviao2.png";
     imagem.alt = "Imagem avião carregada";
 }
-
-// Carne
+// Frango
 function alterarEntrada7 () {
+    const entrada = document.querySelector('.conteiner_calc_entrada');
+    entrada.placeholder = "(N°: 1,2,3,4,...)";
+    entrada.id = "Frango";
+}
+function alterarImagem7() {
+    const imagem = document.querySelector('.conteiner_rosa2');
+    imagem.src = "assets/Frango.png";
+    imagem.alt = "Imagem frango carregada";
+}
+// Carne
+function alterarEntrada8 () {
     const entrada = document.querySelector('.conteiner_calc_entrada');
     entrada.placeholder = "(N° de refeições)";
     entrada.id = "Carne";
 }
-function alterarImagem6() {
+function alterarImagem8() {
     const imagem = document.querySelector('.conteiner_rosa2');
     imagem.src = "assets/carne.png";
     imagem.alt = "Imagem carne carregada";
-}
-
-// Frango
-function alterarEntrada7 () {
-    const entrada = document.querySelector('.conteiner_calc_entrada');
-    entrada.placeholder = "(N° de refeições)";
-    entrada.id = "Frango";
-}
-function alterarImagem6() {
-    const imagem = document.querySelector('.conteiner_rosa2');
-    imagem.src = "assets/Frango.png";
-    imagem.alt = "Imagem frango carregada";
 }
 
 let  etapa = 1;
@@ -141,10 +139,17 @@ function proximaEtapa() {
     }
     if (etapa === 6) {
         // Viajens de Avião
-        alterarEntrada6();
-        alterarImagem6();
+        alterarEntrada5();
+        alterarImagem5();
         imprimirTexto('h1', 'N° de viajens');
         imprimirTexto('p', 'Quantas viagens longas (+500 km) de avião você faz por ano?');
+    }
+     if (etapa === 7) {
+        // Viajens de Avião
+        alterarEntrada7();
+        alterarImagem7();
+        imprimirTexto('h1', 'N° refeiçãoes');
+        imprimirTexto('p', 'Quantas refeições faz por dia?');
     }
      etapa++;
 }
